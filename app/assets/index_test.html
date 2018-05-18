@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <h2>Test Title </h2>
+  <ol id="sp_list"></ol>
+<script>
+window.onload = function() {
+  insertQuestions(); 
+
+}
+
+var list_item_template = "{section}<h3>{title}</h3><p>{body}</p>{body}{caption}"; 
+
+function insertQuestions() {
+  var xmlhttp = new XMLHttpRequest();
+  var url = "contents.json";
+  xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        var myJsonObjectArray = JSON.parse(xmlhttp.responseText); 
+        var html_text = ""; 
+        for (var i in myJsonObjectArray) {
+          var template = list_item_template; 
+          template = replaceAll(template, "{section}", myJsonObjectArray[i].section);
+          template = replaceAll(template, "{title}", myJsonObjectArray[i].title); 
+          template = replaceAll(template, "{caption}", myJsonObjectArray[i].caption); 
+          template = replaceAll(template, "{body}", myJsonObjectArray[i].body); 
+          html_text += template; 
+
+        }
+        document.getElementById("sp_list").innerHTML = html_text; 
+        }
+  }
+  xmlhttp.open("GET", url, true); 
+  xmlhttp.send(); 
+
+}
+
+function replaceAll(text_string, to_replace, replacement) {
+    var result = text_string;
+    while (result.search(to_replace) != -1) {
+        result = result.replace(to_replace, replacement); 
+    }
+    return (result); 
+}
+</script>
+</body>
+</html>

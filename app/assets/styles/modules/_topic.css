@@ -1,0 +1,12 @@
+.topic {
+
+  @mixin atMedium {
+  h3 {
+    font-weight:700;
+    font-size: 1.125rem;
+  }
+  p {
+    margin-bottom:1.5rem; 
+  }
+ }
+}

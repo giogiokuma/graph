@@ -14,9 +14,13 @@
     padding-left: 0;
     padding-right: 0;
   }
-  @mixin atMedium {
-    &--b-margin { 
-      margin-bottom: 38px;
+
+  &--b-margin {
+    margin-bottom: 1rem;
+
+    @mixin atSmall {
+      margin-bottom: 3.875rem;
     }
   }
+
 }

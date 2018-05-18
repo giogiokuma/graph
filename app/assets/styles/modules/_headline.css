@@ -15,6 +15,10 @@
     color: $mainOrange;
   }
 
+  &--white {
+    color:white
+  }
+
   &--small {
     font-size: 1.2rem;
     @mixin atSmall {
@@ -43,7 +47,8 @@
   &--b-margin-large {
     margin-bottom: 1.6em;
   }
+
   &--no-t-margin {
-    margin-top:0;
+    margin-top: 0;
   }
 }
