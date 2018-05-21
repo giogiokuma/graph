@@ -14,6 +14,10 @@
     margin-right: -45px;
   }
 
+  &--gutters-smallest {
+    margin-right: -25px;
+  }
+
   &--gutters > div {
     padding-right: 65px;
   }
@@ -26,7 +30,9 @@
     padding-right: 45px;
   }
 
-
+  &--gutters-smallest > div {
+    padding-right: 25px; 
+  }
 
   &__b-margin-until-medium {
     margin-bottom: 1rem;
@@ -79,7 +85,10 @@
     &__b-margin-until-large {
       margin-bottom: 0;
     }
-
+    &__large-3 {
+      float:left;
+      width:33.33%;
+    }
     &__large-4 {
       float: left;
       width: 33.33%;
