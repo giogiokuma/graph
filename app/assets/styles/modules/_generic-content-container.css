@@ -13,4 +13,11 @@
   p a {
     font-weight: 700;
   }
+  &--section-title {
+    color: $mainBlue;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+  }
 }

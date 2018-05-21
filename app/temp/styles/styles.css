@@ -814,6 +814,14 @@ a {
   font-weight: 700;
 }
 
+.generic-content-container--section-title {
+  color: #2C3239;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
 @media (min-width: 800px) {
 
   .topic h3 {
