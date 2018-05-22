@@ -12,7 +12,54 @@
 
   <title>グラフぐんま</title>
   <style>
-  
+  /* top　へ移動 */
+.arrow-top {
+  background-color: #666;
+  color:#f8f8f8;
+  padding: 13px;
+  border-radius:6px;
+}
+
+a.arrow-top {
+  color:#f8f8f8;
+}
+a.arrow-top:hover {
+  background-color:#ccc;
+}
+#backToTop {
+  cursor: pointer;
+  position: fixed;
+  bottom:30px;
+  right:30px;
+  z-index:99;
+  border:none;
+  outline:none; 
+  background-color:#333;
+  color:white; 
+  display:none;
+  padding:15px;
+  border-radius: 2px;
+  font-size:1rem;
+  animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+#backToTop:hover  {
+  -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -ms-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+     opacity: .5;
+}
   </style>
 </head>
 <body>
@@ -71,31 +118,31 @@
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
+      <div class="numbertext"></div>
       <a href="#wadai1"><img src="assets/images/hero--large-img1.jpg" style="width:100%"></a>
       <div class="text">花と緑のぐんまづくりPR</div>
     </div>
   
     <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
+      <div class="numbertext"></div>
       <a href="#sp"><img src="assets/images/hero--large-img3.jpg" style="width:100%"></a>
       <div class="text">医療先進県ぐんま</div>
     </div>
   
     <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
+        <div class="numbertext"></div>
         <a href="#wadai2"><img src="assets/images/hero--large-img2.jpg" style="width:100%"></a>
         <div class="text">バスと列車でおでかけ わたらせ渓谷</div>
       </div>
       
     <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
+      <div class="numbertext"></div>
       <a href=""><img src="assets/images/hero--large-img4.jpg" style="width:100%"></a>
       <div class="text">上海で日中書道展</div>
     </div>
 
     <div class="mySlides fade">
-        <div class="numbertext">3 / 4</div>
+        <div class="numbertext"></div>
         <a href=""><img src="assets/images/hero--large-img5.jpg" style="width:100%"></a>
         <div class="text">首飾りの古墳人レプリカ初公開</div>
     </div>
@@ -476,7 +523,7 @@
         </p>
         <p>掲載の記事・写真などの無断転載を禁じます。</p>
         <p>Copyright &copy;<script type="text/javascript" language="javascript">var md=new Date(); var yr = md.getYear() % 100 + 2000; document.write(yr);</script>Jomo Shinbun.　All rights reserved.</p>
-  
+        <button onclick="topFunction()" id="backToTop" title="Go to top"><span>Top</span></button>
   </div><!--container-->
 </footer>
 
@@ -513,7 +560,7 @@
  //     window.sr = ScrollReveal(); 
   //  sr.reveal('.section'); 
     
-    </script>
+</script>
 <script>
     // スライド用 
     var slideIndex = 1;
@@ -548,6 +595,23 @@
     }
     
     </script>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("backToTop").style.display = "block";
+    } else {
+        document.getElementById("backToTop").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
 </body>
 </html>
