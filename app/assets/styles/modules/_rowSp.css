@@ -1,9 +1,12 @@
 .rowSp {
 
   @mixin clearfix;
+  
+
 
   &--gutters {
     margin-right: -65px;
+    margin-top:1rem;
   }
 
   &--gutters > div {
@@ -20,8 +23,13 @@
       margin-bottom: 0;
     }
 
-    &__medium-4 {
+    &__medium-4--right {
       float: right;
+      width: 33.33%;
+      margin-left: 1rem;
+    }
+    &__medium-4--left {
+      float: left;
       width: 33.33%;
       margin-left: 1rem;
     }
@@ -30,8 +38,13 @@
       width: 50%;
     }
 
-    &__medium-8 {
+    &__medium-8--right {
       float: right;
+      width: 66.66%;
+    }
+
+    &__medium-8--left {
+      float: left;
       width: 66.66%;
     }
 

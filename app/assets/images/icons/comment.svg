@@ -1,1 +1,9 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#2f5572;}</style></defs><title>comment</title><path class="cls-1" d="M0.72,0.08A0.67,0.67,0,0,0,0,.8V47.28A0.72,0.72,0,0,0,.72,48H48L64,64V0.72A0.67,0.67,0,0,0,63.28,0H0.8Z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<title>comment</title>
+<path fill="#315570" d="M0,8v36c0,4.413,3.588,8,8,8h18.001l15.612,11.713c0.988,0.725,2.39,0.012,2.39-1.213V52h12.001
+	c4.412,0,8-3.587,8-8.001V8c0-4.412-3.588-8-8-8H8C3.588,0,0,3.587,0,8z"/>
+</svg>
