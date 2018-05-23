@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+    $.ajax({ // json読み込み開始
+  type: 'GET',
+  url: 'http://ohatadesign.sakura.ne.jp/graph/name.json',
+  dataType: 'json'
+})
+.then(
+  function(json) { // jsonの読み込みに成功した時
+    console.log('成功');
+    console.log(json);
+  },
+  function() { //jsonの読み込みに失敗した時
+    console.log('失敗');
+  }
+);
+
+
+</script>
+
+</body>
+</html>
