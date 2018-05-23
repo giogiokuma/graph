@@ -1,8 +1,0 @@
-id
-section_title 
-title 
-sub_title
-body
-present_title
-present_body
-
