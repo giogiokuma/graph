@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+</head>
+<body>
+    <div class="container" id="app">
+        <div v-for="el in result">{{ el.title }}</div>
+        
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+<script>
+const vm = new Vue({
+  el: '#app', 
+  data:  {
+    result: [
+    {title: "the very first post", abstract: "lorem ipsum some test dimpsum"},
+      {title: "and then there was the second", abstract: "lorem ipsum some test dimsum"},
+      {title: "third time's a charm", abstract: "lorem ipsum some test dimsum"},
+      {title: "four the last time", abstract: "lorem ipsum some test dimsum"}
+    ]
+  }
+})
+</script>
+</body>
+</html>

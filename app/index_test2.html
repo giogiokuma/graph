@@ -8,7 +8,19 @@
 </head>
 <body>
 <div id="app">
-  {{ characters }}
+  <div>
+    <ul>
+      <li v-for="(value, i) in characters">{{ value }}
+
+        <template v-if="Array.isArray(value)">
+          <div v-for="element in value">{{ element }}</div>
+        </template>
+        <template v-else>
+            {{ value }}
+        </template>
+      </li>
+    </ul>
+  </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>

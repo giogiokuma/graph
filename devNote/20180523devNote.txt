@@ -1,9 +1,16 @@
 20180523
 15:30 までに完成
+
 https://kagasu.hatenablog.com/entry/2017/07/23/170037
 json ファイルを　vuejs で表示
 
 http://ohatadesign.sakura.ne.jp/graph/name.json
+
+
+b. index_test4.html
+
+
+
 
 --------
 **JSONの書き方で押さえること**
