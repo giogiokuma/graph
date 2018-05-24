@@ -6,9 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="temp/styles/mystyles.css">
   <link rel="stylesheet" href="temp/styles/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
   <meta name="keywords" content="グラフぐんま, 群馬県の広報誌, 県政の話題, 文化, 歴史, 自然, 観光, 活躍する人々">
   <meta name="description" content="グラフぐんまは、昭和42年に創刊された群馬県の広報誌です。県内の主な出来事や県政の話題、文化、歴史、自然、観光、活躍する人々などを大きな写真とともに紹介しています。">
 
@@ -63,6 +61,7 @@ a.arrow-top:hover {
      opacity: .5;
 }
   </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
 </head>
 <body>
 <section class="hero is-light">
@@ -169,40 +168,39 @@ a.arrow-top:hover {
   </div><!--wrapper-->
 </div><!--page-section-->
 
-<div class="page-section">
+<div class="page-section" id="app">
   <div class="wrapper">
-    <div class="row row--gutters-smaller generic-content-container row--equal-height-at-medium">
+    <div class="row row--gutters-large generic-content-container row--equal-height-at-medium">
       <div class="row__medium-4">
         <div class="feature-item">
           <div class="feature-item__photo">
           <img class="feature-item__icon" src="assets/images/contents-kao-hi-dpi.jpg">
           </div>
-          <h3 class="feature-item__section-title">かお</h3>
-          <h3 class="feature-item__title">「関東東海花の展覧会」洋らん部門で最高賞</h3>
-          <p>関根 洋一さん</p>
+          <h3 class="feature-item__section-title">{{ sec01 }}</h3>
+          <h3 class="feature-item__title">{{ title01 }}</h3>
+          <p>{{ body01 }}</p>
         </div>
       </div><!--row__medium-4-->
       <div class="row__medium-4">
           <div class="feature-item">
             <div class="feature-item__photo">
-                <img class="feature-item__icon" src="assets/images/contents-wadai-hi-dpi.jpg">
+              <a href="#sp"><img class="feature-item__icon" src="assets/images/contents-wadai-hi-dpi.jpg"></a>
             </div>
-            <h3 class="feature-item__section-title">特集</h3>
-            <h3 class="feature-item__title"><a href="assets/images/tokushu.jpg" data-lightbox="1" title="<h3 class='caption'>6月に移転開院する前橋赤十字病院</h3><br />  
-              <p>県は「医療先進県ぐんまの推進」を目標に掲げ、県民ニーズに対応した高度・専門医療と救急・災害医療の提供・充実を図っている。</p>">医療先進県ぐんま&nbsp;<i class="fas fa-image"></i></a></h3>
-            <p></p>
+            <h3 class="feature-item__section-title">{{ top01 }}</h3>
+            <h3 class="feature-item__title"><a href="#sp">{{ topTitle01 }}&nbsp;<i class="fas fa-angle-double-right"></i></a></h3>
+            <p>{{ topBody01 }}</p>
           </div>
         </div><!--row__medium-4-->
 
 
       <div class="row__medium-4">
-          <div class="present present--last">
-            <h3 class="present__title"> 今月の読者プレゼント</h3>
+          <div class="present">
             <div class="present__photo">
               <img sizes="320px" srcset="assets/images/contents-present-hi-dpi.jpg 320w" alt="プレゼント">
             </div>
+            <h3 class="present__title"> 今月の読者プレゼント</h3>
             <h4 class="present__subtitle">「磯部せんべい食べ比べセット」</h4>
-            <p></p>
+            <p>日頃のご愛読に感謝して、「磯部せんべい食べ比べセット」を5人にプレゼント！12店の味が食べ比べできる大好評のセット。</p>
           </div>
       </div><!--row__medium-4-->
     </div><!--row-->
@@ -532,7 +530,6 @@ a.arrow-top:hover {
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.js"></script>
 <script>
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -616,6 +613,20 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+</script>
+
+<script>
+const vm = new Vue({
+  el: '#app', 
+  data: {
+    sec01: 'かお',
+    title01: '「関東東海花の展覧会」洋らん部門で最高賞', 
+    body01: '関根 洋一さん',
+    top01: '特集',
+    topTitle01: '医療先進県ぐんま',
+    topBody01: '県は「医療先進県ぐんまの推進」を目標に掲げ、県民ニーズに対応した高度・専門医療と救急・災害医療の提供・充実を図っている。', 
+  }
+})
 </script>
 </body>
 </html>

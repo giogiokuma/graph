@@ -443,6 +443,10 @@ a {
   color: #315570;
 }
 
+a:hover {
+  
+}
+
 .large-hero {
   
 }
@@ -957,14 +961,17 @@ a {
 
 .present {
 
-  padding: 0 18px 1px 18px;
+  padding: .5rem 18px 1px 18px;
   margin-bottom: 98px;
+  margin-top:98px;
+  background: #f8f8f8 url('../../assets/images/bk01.png') top repeat;
 }
 
 @media (min-width: 1010px) {
 
   .present {
     margin-bottom: 0;
+    margin-top: 0;
     padding: 0 1.8125rem 1px 1.8125rem;
   }
 }
@@ -973,27 +980,32 @@ a {
   margin-bottom: 0;
 }
 
-.present__photo {
-  border-radius: 80px;
-  overflow: hidden;
-  width: 160px;
-  height: 160px;
-  margin: 0 auto 0 auto;
+.present__photo {/*border-radius: 80px;
+    overflow: hidden;*/
+  width: 320px;
+  height: 320px;
+  margin: .75rem auto .25rem auto;
   position: relative;
 }
 
 .present__title {
   color: #2C3239;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4375em;
   font-weight: 500;
-  margin: 0;
+  margin: .25rem 0 0 0;
+  background: url('../../assets/images/present.png') top no-repeat;
+  width: 100%;
+  height:auto;
+  background-size:100%;
+  color:white;
+  padding:8px .25rem;
 }
 
 .present__subtitle {
   color: #d59541;
   text-align: center;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 0.9375rem;
   margin: .25rem 0 1rem 0;
 }
