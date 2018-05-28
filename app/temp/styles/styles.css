@@ -978,6 +978,7 @@ a:hover {
 
 .present--last {
   margin-bottom: 0;
+  text-align: center;
 }
 
 .present__photo {/*border-radius: 80px;
@@ -1008,6 +1009,10 @@ a:hover {
   font-weight: 700;
   font-size: 0.9375rem;
   margin: .25rem 0 1rem 0;
+}
+
+.present p a {
+  font-weight: 300;
 }
 
 .feature-item {
@@ -1165,5 +1170,60 @@ a:hover {
     margin-left: 0;
     margin-bottom: 0;
     display: inline-block;
+  }
+}
+
+.contents-item-2col {
+position: relative; 
+padding-bottom: 2.5rem;
+  
+}
+
+@media (min-width: 530px) {
+
+  .contents-item-2col {
+    padding-left: 94px;
+  }
+}
+
+.contents-item-2col span {
+  display: block;
+  text-align:center;
+}
+
+@media (min-width: 530px) {
+
+  .contents-item-2col span {
+    text-align: left;
+  }
+}
+
+.contents-item-2col__icon {
+  display: block;
+  margin:0 auto;
+}
+
+@media (min-width: 530px) {
+
+  .contents-item-2col__icon {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.contents-item-2col__title {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-top: .7em;
+  margin-bottom: .8rem;
+  text-align: center;
+}
+
+@media (min-width: 530px) {
+
+  .contents-item-2col__title {
+    text-align: left;
+    margin-top: 0;
+    font-size: 1.875rem;
   }
 } 

@@ -5,6 +5,7 @@
   margin-top:98px;
   background: #f8f8f8 url('../../assets/images/bk01.png') top repeat;
 
+ 
   @mixin atLarge {
     margin-bottom: 0;
     margin-top:0;
@@ -13,6 +14,7 @@
 
   &--last {
     margin-bottom: 0;
+    text-align: center;
   }
 
   &__photo {
@@ -44,5 +46,8 @@
     font-weight: 700;
     font-size: 0.9375rem;
     margin: .25rem 0 1rem 0;
+  }
+   p a {
+    font-weight: 300;
   }
 }
