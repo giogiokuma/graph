@@ -13,6 +13,14 @@ span {
     text-align:left;
   }
 }
+p {
+  display: block; 
+  text-align:center;
+  @mixin atSmall {
+    text-align:left;
+  }
+}
+
 &__icon {
   display: block; 
   margin:0 auto; 

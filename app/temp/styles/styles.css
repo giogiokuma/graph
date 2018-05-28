@@ -1198,6 +1198,18 @@ padding-bottom: 2.5rem;
   }
 }
 
+.contents-item-2col p {
+  display: block;
+  text-align:center;
+}
+
+@media (min-width: 530px) {
+
+  .contents-item-2col p {
+    text-align: left;
+  }
+}
+
 .contents-item-2col__icon {
   display: block;
   margin:0 auto;
