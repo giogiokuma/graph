@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="temp/styles/mystyles.css">
+  <link rel="stylesheet" href="temp/styles/styles.css">
+  <link rel="stylesheet" href="./temp/styles/lightbox.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+  <meta name="keywords" content="グラフぐんま, 群馬県の広報誌, 県政の話題, 文化, 歴史, 自然, 観光, 活躍する人々">
+  <meta name="description" content="グラフぐんまは、昭和42年に創刊された群馬県の広報誌です。県内の主な出来事や県政の話題、文化、歴史、自然、観光、活躍する人々などを大きな写真とともに紹介しています。">
+
+  <title>グラフぐんま</title>
+  <style>
+  /* top　へ移動 */
+.arrow-top {
+  background-color: #666;
+  color:#f8f8f8;
+  padding: 13px;
+  border-radius:6px;
+}
+
+a.arrow-top {
+  color:#f8f8f8;
+}
+a.arrow-top:hover {
+  background-color:#ccc;
+}
+#backToTop {
+  cursor: pointer;
+  position: fixed;
+  bottom:30px;
+  right:30px;
+  z-index:99;
+  border:none;
+  outline:none; 
+  background-color:#333;
+  color:white; 
+  display:none;
+  padding:15px;
+  border-radius: 2px;
+  font-size:1rem;
+  animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+#backToTop:hover  {
+  -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -ms-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+     opacity: .5;
+}
+  </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<section class="hero is-light">
+    <div class="hero-head">
+        <header class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a href="https://www.jomo-news.co.jp/graph/new/" class="navbar-item"><img src="./assets/images/logo.png"></a><div class="navbar-burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="navbar-menu navbar-end" id="navMenu">
+
+              <a href="https://www.jomo-news.co.jp/graph/new/" class="navbar-item">
+                HOME
+              </a>
+              <a href="https://www.jomo-news.co.jp/graph/new/#sp" class="navbar-item">
+                特集
+              </a>
+              <a href="#main_story" class="navbar-item">
+                主な内容
+              </a>
+              <a href="https://www.jomo-news.co.jp/graph/new/tempo.html" class="navbar-item">
+                取り扱い店舗
+              </a>
+              <a href="#back_num" class="navbar-item">
+                バックナンバー
+              </a>
+              <a href="#present" class="navbar-item">
+                プレゼント
+              </a>
+            </div>
+          </header>
+    </div><!--hero-head-->
+</section>
+<div class="page-section">
+  <div class="wrapper">
+    <div class="row">
+      <div class="row__medium-4 row__medium-4--equal row__b-margin-until-medium">
+          <picture>
+              <source sizes="404px" srcset="assets/images/hyoshi.jpg 808w" media="(min-width: 1020px)">
+              <!--<source sizes="320px" srcset="assets/images/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 800px)">  タブレット-->
+                  <img srcset="assets/images/hyoshi.jpg 808w" alt="グラフぐんま 5月号">
+          </picture>
+      </div>
+      <div class="row__medium-8 row__medium-8--equal row__b-margin-until-medium">
+
+ <!--         <picture>
+              <source sizes="404px" srcset="assets/images/hero--large-img1.jpg 808w" media="(min-width: 1020px)">
+              <img srcset="assets/images/hero--large-img1.jpg 1920w" alt="slider">
+          </picture>-->
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <a href="#wadai1"><img src="assets/images/hero--large-img1.jpg" style="width:100%"></a>
+      <div class="text">花と緑のぐんまづくりPR</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <a href="#sp"><img src="assets/images/hero--large-img3.jpg" style="width:100%"></a>
+      <div class="text">医療先進県ぐんま</div>
+    </div>
+  
+    <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <a href="#wadai2"><img src="assets/images/hero--large-img2.jpg" style="width:100%"></a>
+        <div class="text">バスと列車でおでかけ わたらせ渓谷</div>
+      </div>
+      
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <a href=""><img src="assets/images/hero--large-img4.jpg" style="width:100%"></a>
+      <div class="text">上海で日中書道展</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <a href=""><img src="assets/images/hero--large-img5.jpg" style="width:100%"></a>
+        <div class="text">首飾りの古墳人レプリカ初公開</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+  </div>
+
+  </div><!--row-8-->
+
+    </div><!--row-->
+  </div><!--wrapper-->
+</div><!--page-section-->
+
+<div class="page-section">
+  <div class="wrapper">
+    <div class="row row--gutters-smaller generic-content-container row--equal-height-at-medium">
+      <div class="row__medium-4">
+        <div class="feature-item">
+          <div class="feature-item__photo">
+          <img class="feature-item__icon" src="assets/images/contents-kao-hi-dpi.jpg">
+          </div>
+          <h3 class="feature-item__section-title">かお</h3>
+          <h3 class="feature-item__title">「関東東海花の展覧会」洋らん部門で最高賞</h3>
+          <p>関根 洋一さん</p>
+        </div>
+      </div><!--row__medium-4-->
+      <div class="row__medium-4">
+          <div class="feature-item">
+            <div class="feature-item__photo">
+                <img class="feature-item__icon" src="assets/images/contents-wadai-hi-dpi.jpg">
+            </div>
+            <h3 class="feature-item__section-title">特集</h3>
+            <h3 class="feature-item__title"><a href="assets/images/tokushu.jpg" data-lightbox="1" title="<h3 class='caption'>6月に移転開院する前橋赤十字病院</h3><br />  
+              <p>県は「医療先進県ぐんまの推進」を目標に掲げ、県民ニーズに対応した高度・専門医療と救急・災害医療の提供・充実を図っている。</p>">医療先進県ぐんま&nbsp;<i class="fas fa-image"></i></a></h3>
+            <p></p>
+          </div>
+        </div><!--row__medium-4-->
+
+
+      <div class="row__medium-4"><div id="present"></div>
+          <div class="present present--last">
+            <h3 class="present__title"> 今月の読者プレゼント</h3>
+            <div class="present__photo">
+              <img sizes="320px" srcset="assets/images/contents-present-hi-dpi.jpg 320w" alt="プレゼント">
+            </div>
+            <h4 class="present__subtitle">「磯部せんべい食べ比べセット」</h4>
+            <p class="present__body"><a href="https://www.jomo-news.co.jp/graph/new/present.htm"><i class="fas fa-chevron-right"></i>お申し込みはこちらから</a></p>
+          </div>
+      </div><!--row__medium-4-->
+    </div><!--row-->
+  </div><!--wrapper-->
+</div><!--page-section-->
+
+<div id="contents-item" class="page-section page-section--no-b-padding-until-large page-section--contents-item">
+  <div class="wrapper wrapper--no-padding-until-large">
+    <h2 class="section-title section-title--blue">主な内容 </h2>
+    <div class="row row--gutters row--equal-height-at-large row--gutters-smallest row--t-padding generic-content-container">
+        <div class="row__large-3">
+          <div class="contents-item">
+                <h3 class="contents-item__title"></h3>
+                <div class="contents-item__photo">
+                  <img sizes="320px" srcset="assets/images/contents-wadai1-hi-dpi.jpg"></a>
+                </div>
+                <h3 class="contents-item__section-title">県政の話題</h3>
+                <h3 class="contents-item__title"> <a href="assets/images/hero--large-img1.jpg" data-lightbox="1" title="<h3 class='caption'>花と緑のぐんまづくりPR</h3><br /> <p>地域をたくさんの花々で彩る「花と緑のぐんまづくり2018in吉岡」（花と緑のぐんまづくり推進協議会主催）が5月13日まで町役場周辺をメイン会場に開かれている。アイスランドポピーやマーガレット、ペチュニアなど約４万株が華やかな雰囲気を演出している。</p>">花と緑のぐんまづくりPR&nbsp;<i class="fas fa-image"></i></h3>
+                <p></p>
+          </div>
+        </div>
+        <div class="row__large-3">
+          <div class="contents-item">
+            <h3 class="contents-item__title"> </h3>
+            <div class="contents-item__photo">
+              <img ssizes="320px" srcset="assets/images/contents-wadai2-hi-dpi.jpg">
+            </div>
+            <h3 class="contents-item__section-title">県政の話題</h3>
+            <h3 class="contents-item__title"> <a href="assets/images/hero--large-img2.jpg" data-lightbox="1" title="<h3 class='caption'>バスと列車でおでかけ わたらせ渓谷</h3><br /><p>わたらせ渓谷鐵道（みどり市）は、２０１９年３月29日に開業30周年を迎えるのを前に、その記念事業の一環として、日光とわ鐵を結ぶバスと列車の運賃をセットにしたツアーを初めて企画した。ツアーは日光側と本県側両方から参加できる行程で、わ鐵の利用や県外からの観光誘客の促進が狙い。本年度はツアーのほか、さまざまなイベントを予定しており、30周年に向けてPR(ピーアール)に力を入れる。</p>">バスと列車でおでかけ わたらせ渓谷&nbsp;<i class="fas fa-image"></i></a> </h3>
+            <p>
+            </p>
+          </div>
+        </div>
+        <div class="row__large-3">
+          <div class="contents-item">
+            <h3 class="contents-item__title"> </h3>
+            <div class="contents-item__photo">
+              <img ssizes="320px" srcset="assets/images/contents-wadai3-hi-dpi.jpg" alt="">
+            </div>
+            <h3 class="contents-item__section-title">県政の話題</h3>
+            <h3 class="contents-item__title">上海で日中書道展</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="row__large-3">           
+          <div class="contents-item">
+            <h3 class="contents-item__title"> </h3><div id="main_story"></div>
+            <div class="contents-item__photo">
+              <img sizes="320px" srcset="assets/images/contents-wadai4-hi-dpi.jpg" alt="" class="feature-item__icon">
+            </div>
+            <h3 class="contents-item__section-title">県政の話題</h3>
+            <h3 class="contents-item__title">首飾りの古墳人レプリカ初公開</h3>
+            <p></p>
+          </div>
+         </div>
+      
+　　 </div>
+  </div>  <!--wrapper-->
+</div><!--contents-item-->
+
+<!--<div id="contents-item" class="page-section page-section--no-b-padding-until-large page-section--contents-item">
+    <div class="wrapper wrapper--no-padding-until-large">
+      <div class="row row--gutters row--equal-height-at-large row--gutters-small row--t-padding generic-content-container">
+          <div class="row__large-3">
+            <div class="contents-item">
+                  <h3 class="contents-item__title"> </h3>
+                  <div class="contents-item__photo">
+                    <img sizes="320px" srcset="assets/images/contents-wadai1-hi-dpi.jpg">
+                  </div>
+                  <h3 class="contents-item__section-title">トピックス＆スポーツ</h3>
+                  <h3 class="contents-item__title"> </h3>
+                  <p></p>
+            </div>
+          </div>
+          <div class="row__large-3">
+            <div class="contents-item">
+              <h3 class="contents-item__title"> </h3>
+              <div class="contents-item__photo">
+                <img ssizes="320px" srcset="assets/images/contents-wadai2-hi-dpi.jpg">
+              </div>
+              <h3 class="contents-item__section-title">かわら版</h3>
+              <h3 class="contents-item__title">  </h3>
+              <p>
+              </p>
+            </div>
+          </div>
+          <div class="row__large-3">
+            <div class="contents-item">
+              <h3 class="contents-item__title"> </h3>
+              <div class="contents-item__photo">
+                <img ssizes="320px" srcset="assets/images/contents-wadai3-hi-dpi.jpg" alt="">
+              </div>
+              <h3 class="contents-item__section-title">ぐんま名山探訪</h3>
+              <h3 class="contents-item__title">雨ん坊主（高崎市）</h3>
+              <p></p>
+            </div>
+          </div>
+          <div class="row__large-3">           
+            <div class="contents-item">
+              <h3 class="contents-item__title"> </h3>
+              <div class="contents-item__photo">
+                <img sizes="320px" srcset="assets/images/contents-wadai4-hi-dpi.jpg" alt="" class="feature-item__icon">
+              </div>
+              <h3 class="contents-item__section-title">ぐんま絹遺産</h3>
+              <h3 class="contents-item__title">蚕神塔（沼田市）</h3>
+              <p></p>
+            </div>
+           </div>
+        
+  　　 </div>
+    </div>  // wrapper
+  </div>// contents-item-->
+
+
+<div class="page-section">
+    <div class="wrapper">
+      <h2 class="section-title"></h2>
+
+      <div class="row row--gutters-large generic-content-container">
+        
+        <div class="row__medium-6">
+          <div class="contents-item-2col">
+            <span class="icon icon--rain contents-item-2col__icon"><i class="fas fa-comments fa-3x"></i></span>
+            <h3 class="contents-item-2col__title">トピックス＆スポーツ</h3>
+            <p></p>
+          </div>
+
+          <div class="contents-item-2col">
+            <span class="icon icon--globe contents-item-2col__icon"><i class="fas fa-comments fa-3x"></i></span>
+            <h3 class="contents-item-2col__title">かわら版</h3>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="row__medium-6">
+          <div class="contents-item-2col">
+            <span class="icon icon--wifi contents-item-2col__icon"><i class="fas fa-comments fa-3x"></i></span>
+            <h3 class="contents-item-2col__title">ぐんま名山探訪</h3>
+            <p>雨ん坊主（高崎市）   </p>
+          </div>
+
+          <div class="contents-item-2col">
+            <span class="icon icon--fire contents-item-2col__icon"><i class="fas fa-comments fa-3x"></i></span>
+            <h3 class="contents-item-2col__title"> ぐんま絹遺産</h3>
+            <p>蚕神塔（沼田市）</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="row row--gutters-large generic-content-container">
+        
+        <div class="row__medium-6">
+          <div class="contents-item-2col">
+            <span class="icon icon--rain contents-item-2col__icon"><i class="fas fa-comments fa-3x"></i></span>
+            <h3 class="contents-item-2col__title">ひめラボ旬食キッチン</h3>
+            <p>小玉スイカのカラフルピザ</p>
+          </div>
+
+          <div class="contents-item-2col">
+            <span class="icon icon--globe contents-item-2col__icon"><i class="fas fa-comments fa-3x"></i></span>
+            <h3 class="contents-item-2col__title">ぐんま湯けむり浪漫</h3>
+            <p>伊香保温泉（渋川市）</p>
+          </div>
+        </div>
+
+        <div class="row__medium-6">
+          <div class="contents-item-2col">
+            <span class="icon icon--wifi contents-item-2col__icon"><i class="fas fa-comments fa-3x"></i></span>
+            <h3 class="contents-item-2col__title">おさんぽ日和／安中のちょっといいもの</h3>
+            <p>安中城址周辺エリア   </p>
+          </div>
+
+          <div class="contents-item-2col">
+            <span class="icon icon--fire contents-item-2col__icon"><i class="fas fa-comments fa-3x"></i></span>
+            <h3 class="contents-item-2col__title"> </h3>
+            <p>
+              <div id="app">
+                <section v-for="(value, index) in infos">
+                  {{ value }} {{ index }}
+                </section>
+                </div>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<div id="our-beginning" class="page-section">
+  <div class="wrapper">
+    <div class="row row--gutters">
+      <div class="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
+        <picture>
+            <source sizes="404px" srcset="assets/images/hyoshi.jpg 808w" media="(min-width: 1020px)">
+            <!--<source sizes="320px" srcset="assets/images/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 800px)">  タブレット-->
+                <img srcset="assets/images/hyoshi.jpg 808w" alt="グラフぐんま 5月号">
+        </picture>
+      </div>
+      <div class="row__medium-8 row__medium-8--smaller">
+        <div class="generic-cotnent-container">
+          <h2 class="generic-content-container--section-title section-title--blue">『グラフぐんま』とは</h2>
+          <p> &nbsp;&nbsp;&nbsp;グラフぐんまは、昭和42年に創刊された群馬県の広報誌です。県内の主な出来事や県政の話題、文化、歴史、自然、観光、活躍する人々などを大きな写真とともに紹介しています。県政と県民の“目で見る架け橋”として、県民の皆さんに親しまれるような誌面作りを心掛けています。</p>
+        </div>
+        <div class="generic-content-container"><div id="back_num"></div>
+          <table class="table">
+            <thead>
+              <tr>
+                <td colspan="2"><strong>グラフぐんま バックナンバー</strong></td>
+              </tr>
+            </thead>
+              <tr>
+                <td><a href="https://www.jomo-news.co.jp/graph/1804/#sp"><img src="./assets/images/201804fr_thumb.jpg" alt=""></a></td>
+                <td>
+                  &nbsp; <a href="https://www.jomo-news.co.jp/graph/1804/#sp">2018年4月号   特集：写真で見る県政のあゆみ</a><br />
+                </td>
+              </tr>
+              <tr>
+                <td><a href="https://www.jomo-news.co.jp/graph/180203/#sp"><img src="./assets/images/201802_3fr_thumb.jpg" alt=""></a></td>
+                <td>
+                  &nbsp; <a href="https://www.jomo-news.co.jp/graph/180203/#sp">2018年2.3月号   特集：群馬のロケ地探訪</a><br />
+                </td>
+              </tr>
+              <tr>
+                <td><a href="https://www.jomo-news.co.jp/graph/1801/#sp"><img src="./assets/images/201801fr_thumb.jpg" alt=""></a></td>
+                <td>
+                  &nbsp; <a href="https://www.jomo-news.co.jp/graph/1801/#sp">2018年1月号   特集：新春知事対談　未来をひらく　八ツ場ダム</a><br />
+                </td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-file-alt fa-2x"></i></td>
+                <td><a href="https://www.jomo-news.co.jp/graph/new/backnumber2017.html">グラフぐんま2017年1～12月号</a><br />
+                </td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-file-alt fa-2x"></i></td>
+                <td><a href="https://www.jomo-news.co.jp/graph/new/backnumber2016.html">グラフぐんま2016年1～12月号</a><br />
+                </td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-file-alt fa-2x"></i></td>
+                <td><a href="https://www.jomo-news.co.jp/graph/new/backnumber2015.html">グラフぐんま2015年1～12月号</a><br />
+                </td>
+              </tr>
+ <!--             <tr>
+                  <td><i class="fas fa-file-alt fa-2x"></i></td>
+                <td>グラフぐんま2017年1～12月号<br />
+                  &nbsp; <a href="https://www.jomo-news.co.jp/graph/1712/#sp">2017年12月号   特集：ぐんまの古建築</a><br />
+                  &nbsp; <a href="https://www.jomo-news.co.jp/graph/171011/#sp">2017年10-11月号   特集：鉄道で出掛けよう</a><br />
+                  &nbsp; <a href="https://www.jomo-news.co.jp/graph/1709/#sp">2017年9月号   特集：尾瀬国立公園10周年</a><br />
+                  &nbsp; <a href="https://www.jomo-news.co.jp/graph/1708/#sp">2017年8月号   特集：ググっとぐんま観光キャンペーン</a><br />
+                  <!--&nbsp; <a href="https://www.jomo-news.co.jp/graph/170607/">2017年6-7月号   特集：八ツ場ダムを知ろう</a><br />
+                  &nbsp; <a href="https://www.jomo-news.co.jp/graph/1705/">2017年5月号   特集：群馬の城を訪ねて</a><br />
+                  &nbsp; <a href="https://www.jomo-news.co.jp/graph/1704/">2017年4月号   特集：写真で見る県政のあゆみ</a><br />
+                  &nbsp; <a href="https://www.jomo-news.co.jp/graph/170203/">2017年2-3月号   特集：ぐんまの郷土かるた</a><br />
+                  &nbsp; <a href="https://www.jomo-news.co.jp/graph/1701/">2017年１月号   特集：新春知事対談　文化の芽生え、群馬から</a><br />
+                </td>
+              </tr>
+              <tr>
+                  <td><i class="fas fa-file-alt fa-2x"></i></td>
+                <td>グラフぐんま2016年1～12月号</td>
+              </tr>
+              <tr>
+                  <td><i class="fas fa-file-alt fa-2x"></i></td>
+                <td>グラフぐんま2015年1～12月号</td>
+              </tr>-->
+          </table>
+        </div>
+      </div>
+    </div><!--row row-gutters-->
+  </div><!--wrapper-->
+</div><!--our-beginning-->
+
+<!--
+<div id="sp" class="page-section page-section--blue">
+    <div class="wrapper">
+      <div class="rowSp rowSp--gutters">
+        <div class="rowSp__medium-4--right rowSp__medium-4--larger rowSp__b-margin-until-medium">
+            <picture>
+                <source sizes="404px" srcset="assets/images/tokushu.jpg 808w" media="(min-width: 1020px)">
+                <source sizes="320px" srcset="assets/images/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 800px)">  タブレット
+                    <img srcset="assets/images/tokushu.jpg 808w" alt="特集写真">
+            </picture>
+        </div>
+        
+          <div class="generic-content-container">
+            <h2 class="headline headline--no-t-margin headline--white">医療先進県ぐんま</h2>
+            <p>県は「医療先進県ぐんまの推進」を目標に掲げ、県民ニーズに対応した高度・専門医療と救急・災害医療の提供・充実を図っている。県立4病院の安定経営のもとで良質な医療提供を目指すほか、今年6月には県内唯一の高度救命救急センターであり本県医療の中核を担う前橋赤十字病院が移転開院する。群馬大が展開している重粒子線がん治療では今年4月から公的医療保険の適用範囲が拡大した。県は今後も関係機関と連携しながら時代に即した医療体制を整え、県民の安心な暮らしを支えていく。</p>
+          </div>
+      </div>
+    </div>
+  </div>-->
+
+  <!--<div class="page-section"><div id="wadai1"></div>
+    <div class="wrapper">
+      <div class="rowSp rowSp--gutters">
+          <div class="rowSp__medium-4--left rowSp__b-margin-until-medium">
+              <picture>
+                  <source sizes="404px" srcset="assets/images/hero--large-img1.jpg 808w" media="(min-width: 1020px)">
+                  <source sizes="320px" srcset="assets/images/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 800px)">  タブレット
+                      <img srcset="assets/images/hero--large-img1.jpg 808w" alt="">
+              </picture>
+          </div>
+          <div class="generic-content-container">
+            <h2 class="headline headline--no-t-margin headline--blue"> 花と緑のぐんまづくりPR</h2>
+            <p>地域をたくさんの花々で彩る「花と緑のぐんまづくり2018in吉岡」（花と緑のぐんまづくり推進協議会主催）が5月13日まで町役場周辺をメイン会場に開かれている。アイスランドポピーやマーガレット、ペチュニアなど約４万株が華やかな雰囲気を演出している。</p>
+          </div>
+      </div>
+    </div>
+  </div>-->
+
+<!--
+  <div class="page-section">
+      <div class="wrapper">
+        <div class="rowSp rowSp--gutters">
+            <div class="rowSp__medium-4--left rowSp__b-margin-until-medium">
+                <picture>
+                    <source sizes="404px" srcset="assets/images/hero--large-img2.jpg 808w" media="(min-width: 1020px)">
+                    <source sizes="320px" srcset="assets/images/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 800px)">  タブレット
+                        <img srcset="assets/images/hero--large-img2.jpg 808w" alt="">
+                </picture><div id="wadai2"></div>
+            </div>
+            <div class="generic-content-container">
+              <h2 class="headline headline--no-t-margin headline--blue">  バスと列車でおでかけ わたらせ渓谷</h2>
+              <p> わたらせ渓谷鐵道（みどり市）は、２０１９年３月29日に開業30周年を迎えるのを前に、その記念事業の一環として、日光とわ鐵を結ぶバスと列車の運賃をセットにしたツアーを初めて企画した。ツアーは日光側と本県側両方から参加できる行程で、わ鐵の利用や県外からの観光誘客の促進が狙い。本年度はツアーのほか、さまざまなイベントを予定しており、30周年に向けてPR(ピーアール)に力を入れる。</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  -->
+
+<!--
+<div id="features" class="page-section page-section--blue">
+  <div class="wrapper">
+    <div class="box topic">
+    <pre><h2 class="title is-4">主な内容</h2></pre>
+
+    <i class="fas fa-comment fa-3x"></i>
+    <h2 class="title is-4">かお</h2>
+    <h3>「関東東海花の展覧会」洋らん部門で最高賞　関根 洋一さん</h3>
+    <br />
+
+    <i class="fas fa-comment fa-3x"></i>
+    <h2 class="title is-4">県政の話題</h2>
+
+
+    <h3>花と緑のぐんまづくりPR</h3>
+    <p>地域をたくさんの花々で彩る「花と緑のぐんまづくり2018in吉岡」（花と緑のぐんまづくり推進協議会主催）が5月13日まで町役場周辺をメイン会場に開かれている。アイスランドポピーやマーガレット、ペチュニアなど約４万株が華やかな雰囲気を演出している。</p>
+    <caption>県産食材を味わおうと試食も盛況だった</caption><br />
+
+
+    <h3>バスと列車でおでかけ わたらせ渓谷</h3>
+    <p>わたらせ渓谷鐵道（みどり市）は、２０１９年３月29日に開業30周年を迎えるのを前に、その記念事業の一環として、日光とわ鐵を結ぶバスと列車の運賃をセットにしたツアーを初めて企画した。ツアーは日光側と本県側両方から参加できる行程で、わ鐵の利用や県外からの観光誘客の促進が狙い。本年度はツアーのほか、さまざまなイベントを予定しており、30周年に向けてPR(ピーアール)に力を入れる。</p>
+    <caption>道幅が広がった県道伊勢崎深谷線の上武大橋</caption><br />
+
+
+    <h3>上海で日中書道展</h3>
+    <p></p>
+
+  
+    <h3>首飾りの古墳人レプリカ初公開</h3>
+    <p></p>
+    <br>
+    
+    <i class="fas fa-comment fa-3x"></i>
+    <h2 class="title is-4">トピックス＆スポーツ</h2>
+    <h3></h3>
+    <p></p>
+    <br>
+
+    <i class="fas fa-comment fa-3x"></i>
+    <h2 class="title is-4">かわら版</h2>
+    <h3></h3>
+    <p></p>
+    <br>
+
+    <i class="fas fa-comment fa-3x"></i>
+    <h2 class="title is-4">ぐんま名山探訪</h2>
+    <h3>雨ん坊主（高崎市） </h3>
+    <p></p>
+    <br>
+
+    <i class="fas fa-comment fa-3x"></i>
+    <h2 class="title is-4">ぐんま絹遺産</h2>
+    <h3>蚕神塔（沼田市）</h3>
+    <p></p>
+    <br>
+
+    <i class="fas fa-comment fa-3x"></i>
+    <h2 class="title is-4">ひめラボ旬食キッチン　</h2>
+    <h3>小玉スイカのカラフルピザ</h3>
+    <p></p>
+    <br>
+
+    <i class="fas fa-comment fa-3x"></i>
+    <h2 class="title is-4">ぐんま湯けむり浪漫</h2>
+    <h3>伊香保温泉（渋川市）</h3>
+    <p></p>
+     <br>
+
+    <i class="fas fa-comment fa-3x"></i>
+    <h2 class="title is-4">おさんぽ日和／安中のちょっといいもの</h2>
+    <h3>安中城址周辺エリア</h3>
+    <p></p>
+    </div>
+  </div>
+</div>--><!--features-->
+
+<footer class="footer is-small">
+  <div class="container">
+        <p>
+          <strong>上毛新聞社 事業局出版部</strong><br />
+          〒371-8666 群馬県前橋市古市町1-50-21<br />
+          TEL：027-254-9966<br />
+          FAX：027-254-9906<br />
+          <a href="contact.html">お問い合わせ</a><br />
+        </p>
+        <p>掲載の記事・写真などの無断転載を禁じます。</p>
+        <p>Copyright &copy;<script type="text/javascript" language="javascript">var md=new Date(); var yr = md.getYear() % 100 + 2000; document.write(yr);</script>Jomo Shinbun.　All rights reserved.</p>
+        <button onclick="topFunction()" id="backToTop" title="Go to top"><span>Top</span></button>
+  </div><!--container-->
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.js"></script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      
+        // Get all "navbar-burger" elements
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+      
+          // Add a click event on each of them
+          $navbarBurgers.forEach(function ($el) {
+            $el.addEventListener('click', function () {
+      
+              // Get the target from the "data-target" attribute
+              var target = $el.dataset.target;
+              var $target = document.getElementById(target);
+      
+              // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+              $el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+      
+            });
+          });
+        }
+      
+      });
+    
+ //     window.sr = ScrollReveal(); 
+  //  sr.reveal('.section'); 
+    
+</script>
+<script>
+    // スライド用 
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n); 
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n); 
+    }
+    
+    function showSlides(n) {
+      var i; 
+      var slides = document.getElementsByClassName("mySlides"); 
+      var dots = document.getElementsByClassName("dot"); 
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+      }
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+    
+      slides[slideIndex-1].style.display  = "block"; 
+      dots[slideIndex-1].className += " active";
+    }
+    
+    </script>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("backToTop").style.display = "block";
+    } else {
+        document.getElementById("backToTop").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+<script>
+  axios.get('http://ohatadesign.sakura.ne.jp/graph/network_transfer.json')
+    .then(function(response) {
+      initVue(response.data);
+    })
+    .catch(function(error){
+      console.log(error); 
+    }); 
+  function initVue(info) {
+    new Vue({
+      el: '#app',
+      data: {
+        infos:info
+      }
+    })
+  }
+
+
+</script>
+</body>
+</html>
