@@ -63,10 +63,9 @@ a.arrow-top:hover {
      opacity: .5;
 }
   </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
 </head>
-<body>
+<body onload="getData();">
 <section class="hero is-light">
     <div class="hero-head">
         <header class="navbar" role="navigation" aria-label="main navigation">
@@ -381,11 +380,20 @@ a.arrow-top:hover {
             <span class="icon icon--fire contents-item-2col__icon"><i class="fas fa-comments fa-3x"></i></span>
             <h3 class="contents-item-2col__title"> </h3>
             <p>
-              <div id="app">
-                <section v-for="(value, index) in infos">
-                  {{ value }} {{ index }}
-                </section>
-                </div>
+<section class="main">
+  <article id="article_1"></article>
+  <article id="article_2"></article>
+  <article id="article_3"></article>
+  <article id="article_4"></article>
+  <article id="article_5"></article>
+  <article id="article_6"></article>
+  <article id="article_7"></article>
+  <article id="article_8"></article>
+  <article id="article_9"></article>
+  <article id="article_10"></article>
+  <article id="article_11"></article>
+  <article id="article_12"></article>
+</section>
             </p>
           </div>
         </div>
@@ -720,21 +728,28 @@ function topFunction() {
 }
 </script>
 <script>
-  axios.get('http://ohatadesign.sakura.ne.jp/graph/network_transfer.json')
-    .then(function(response) {
-      initVue(response.data);
-    })
-    .catch(function(error){
-      console.log(error); 
-    }); 
-  function initVue(info) {
-    new Vue({
-      el: '#app',
-      data: {
-        infos:info
-      }
-    })
+function getData() {
+  var xmlhttp = new XMLHttpRequest();
+  var url = "network_transfer.json"; 
+
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      var myArr = JSON.parse(xmlhttp.responseText); 
+      insertData(myArr); 
+    }
   }
+
+  xmlhttp.open("GET", url, true) ;
+  xmlhttp.send(); 
+}
+
+function insertData(data) {
+  var output = ""; 
+  for (var item in data) {
+    var element = document.getElementById("article_" + data[item].id); 
+    element.innerHTML = data[item].text; 
+  }
+}
 
 
 </script>

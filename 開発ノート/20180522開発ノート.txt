@@ -1,3 +1,22 @@
+20180529
+
+【重要】HTML にデータを流し込んでいると考える
+
+-----------
+データをつくる
+
+
+
+
+-------------
+axois と vuejs を使って json >  https サーバーで　ブロックされて　エラーに　> 読込めない
+
+
+ > 従って、ライブラリは使わず　
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+---------------------
 axois とvuejs を使って json ファイルを読み込む
 
 https://kagasu.hatenablog.com/entry/2017/07/23/170037
