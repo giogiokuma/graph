@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>network transfer</title>
+</head>
+<body>
+<header>
+    <h1>JavaScript Basics</h1>
+    <h1>Networking</h1>
+    <input type="button" onclick="getData();" value="Get Data">
+</header>
+<section class="main">
+    <article id="article_1"></article>
+    <article id="article_2"></article>
+    <article id="article_3"></article>
+</section>
+<footer>
+</footer>
+
+<script>
+function getData() {
+  var xmlhttp = new XMLHttpRequest();
+  var url = "network_transfer.json";
+
+  xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          //console.log(xmlhttp.responseText)
+          var myArr = JSON.parse(xmlhttp.responseText);
+          insertData(myArr);
+      }
+  }
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+}
+
+function insertData(data) {
+    var output = "";
+    for (var item in data) {
+        var element = document.getElementById("article_" + data[item].id);
+        element.innerHTML = data[item].text;
+    }
+}
+
+
+</script>
+</body>
+</html>

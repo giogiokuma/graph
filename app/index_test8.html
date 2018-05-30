@@ -384,6 +384,15 @@ a.arrow-top:hover {
                     <article id="article_1"></article>
                     <article id="article_2"></article>
                     <article id="article_3"></article>
+                    <article id="article_4"></article>
+                    <article id="article_5"></article>
+                    <article id="article_6"></article>
+                    <article id="article_7"></article>
+                    <article id="article_8"></article>
+                    <article id="article_9"></article>
+                    <article id="article_10"></article>
+                    <article id="article_11"></article>
+                    <article id="article_12"></article>
                 </section>
             </p>
           </div>
@@ -722,13 +731,13 @@ function topFunction() {
 
 function getData() {
   var xmlhttp = new XMLHttpRequest();
-  var url = "network_transfer.json";
+  var url = "network_transfer2.json";
 
   xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-          //console.log(xmlhttp.responseText)
           var myArr = JSON.parse(xmlhttp.responseText);
           insertData(myArr);
+
       }
   }
   xmlhttp.open("GET", url, true);
@@ -739,7 +748,9 @@ function insertData(data) {
     var output = "";
     for (var item in data) {
         var element = document.getElementById("article_" + data[item].id);
-        element.innerHTML = data[item].text;
+
+        element.innerHTML = data[item].id + "\n" + data[item].sec + "\n" + data[item].title + "\n" + data[item].caption + "\n" + data[item].text;
+        
     }
 }
 
