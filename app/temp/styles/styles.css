@@ -967,6 +967,14 @@ a:hover {
   background: #f8f8f8 url('../../assets/images/bk01.png') top repeat;
 }
 
+@media (min-width: 530px) {
+
+  .present {
+    display: block;
+    margin: 98px auto;
+  }
+}
+
 @media (min-width: 1010px) {
 
   .present {
@@ -1024,7 +1032,11 @@ a:hover {
 }
 
 @media (min-width: 530px) {
-  
+
+  .feature-item {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1010px) {
@@ -1073,6 +1085,14 @@ a:hover {
 
 .contents-item--last {
   margin-bottom:4rem;
+}
+
+@media (min-width: 530px) {
+
+  .contents-item {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1010px) {

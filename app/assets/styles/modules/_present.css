@@ -5,7 +5,10 @@
   margin-top:98px;
   background: #f8f8f8 url('../../assets/images/bk01.png') top repeat;
 
- 
+  @mixin atSmall {
+    display:block;
+    margin:98px auto;
+  }
   @mixin atLarge {
     margin-bottom: 0;
     margin-top:0;

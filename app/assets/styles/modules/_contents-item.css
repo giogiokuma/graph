@@ -2,11 +2,14 @@
   
   padding: 0 18px 1px 18px;
 
-
+  
   &--last {
     margin-bottom:4rem;
   }
-
+  @mixin atSmall {
+    display:block;
+    margin: 0 auto;
+  }
   @mixin atLarge {
     margin-bottom: 0;
     padding: 0 1.8125rem 1px 1.8125rem;
