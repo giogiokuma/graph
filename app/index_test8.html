@@ -395,6 +395,18 @@ a.arrow-top:hover {
                     <article id="article_12"></article>
                 </section>
             </p>
+            <p id="sec_data_1"></p>
+            <p id="sec_data_2"></p>
+            <p id="sec_data_3"></p>
+            <p id="sec_data_4"></p>
+            <p id="sec_data_5"></p>
+            <p id="sec_data_6"></p>
+            <p id="sec_data_7"></p>
+            <p id="sec_data_8"></p>
+            <p id="sec_data_9"></p>
+            <p id="sec_data_10"></p>
+            <p id="sec_data_11"></p>
+            <p id="sec_data_12"></p>
           </div>
         </div>
 
@@ -748,6 +760,19 @@ function insertData(data) {
     var output = "";
     for (var item in data) {
         var element = document.getElementById("article_" + data[item].id);
+        
+        // セクション取得
+        var element_sec = document.getElementById("sec_data" + data[item].sec);
+        element_sec.innerHTML = data[item].sec;
+        // タイトル取得
+        //var element_title = data[item].title;
+
+        // キャプション取得
+        //var element_caption = data[item].caption; 
+
+        // 本文
+        //var element_text = data[item].text; 
+
 
         element.innerHTML = data[item].id + "\n" + data[item].sec + "\n" + data[item].title + "\n" + data[item].caption + "\n" + data[item].text;
         

@@ -1,3 +1,16 @@
+20180531
+
+データー
+element_id
+element_sec = セクション
+element_title = タイトル
+element_caption = キャプション
+element_text = 本文
+
+
+
+-----------
+
 20180529
 
 【重要】HTML にデータを流し込んでいると考える
