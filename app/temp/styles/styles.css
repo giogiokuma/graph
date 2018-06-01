@@ -654,6 +654,14 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+@media (min-width: 530px) {
+
+  .row {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 800px) {
 
   .row__b-margin-until-medium {
