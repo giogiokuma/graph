@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <h3 id="sec_data_2" class="feature-item__section-title"></h3>
+  <h3 id="title_data_2" class="feature-item__title"></h3>
+  <h3 id="caption_data_2"></h3>
+
+  <h3 id="sec_data_1" class="feature-item__section-title"></h3>
+  <h3  id="title_data_1" class="feature-item__title"><a href="assets/images/tokushu.jpg" data-lightbox="1" title="<h3 class='caption'>6月に移転開院する前橋赤十字病院</h3><br />  
+              <p>県は「医療先進県ぐんまの推進」を目標に掲げ、県民ニーズに対応した高度・専門医療と救急・災害医療の提供・充実を図っている。</p>">医療先進県ぐんま&nbsp;<i class="fas fa-image"></i></a></h3>
+  <h3 id="caption_data_1"></h3>
+
+  <h3 id="sec_data_3" class="contents-item__section-title"></h3>         
+  <h3 id="title_data_3" class="contents-item__title"> <a href="assets/images/hero--large-img1.jpg" data-lightbox="1" title="<h3 class='caption'></h3><br /> <p>地域をたくさんの花々で彩る「花と緑のぐんまづくり2018in吉岡」（花と緑のぐんまづくり推進協議会主催）が5月13日まで町役場周辺をメイン会場に開かれている。アイスランドポピーやマーガレット、ペチュニアなど約４万株が華やかな雰囲気を演出している。</p>">花と緑のぐんまづくりPR&nbsp;<i class="fas fa-image"></i></h3>
+  <h3 id="caption_data_3"></h3>
+
+  <h3 id="sec_data_4" class="contents-item__section-title"></h3>
+  <h3 id="title_data_4" class="contents-item__title"> <a href="assets/images/hero--large-img2.jpg" data-lightbox="1" title="<h3 class='caption'>バスと列車でおでかけ わたらせ渓谷</h3><br /><p>わたらせ渓谷鐵道（みどり市）は、２０１９年３月29日に開業30周年を迎えるのを前に、その記念事業の一環として、日光とわ鐵を結ぶバスと列車の運賃をセットにしたツアーを初めて企画した。ツアーは日光側と本県側両方から参加できる行程で、わ鐵の利用や県外からの観光誘客の促進が狙い。本年度はツアーのほか、さまざまなイベントを予定しており、30周年に向けてPR(ピーアール)に力を入れる。</p>">バスと列車でおでかけ わたらせ渓谷&nbsp;<i class="fas fa-image"></i></a> </h3> 
+  <h3 id="caption_data_4"></h3>
+
+  <h3 id="sec_data_5" class="contents-item__section-title"></h3>
+  <h3 id="title_data_5" class="contents-item__title"></h3>
+  <h3 id="caption_data_5"></h3>
+
+  
+<div class="sec"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(function() {
+//JSONデータ
+var data = {"release": [
+    {
+        "id": 1,
+        "sec": "特集",
+        "title":"医療先進県ぐんま",
+        "caption": "6月に移転開院する前橋赤十字病院",
+        "text": "県は「医療先進県ぐんまの推進」を目標に掲げ、県民ニーズに対応した高度・専門医療と救急・災害医療の提供・充実を図っている。県立4病院の安定経営のもとで良質な医療提供を目指すほか、今年6月には県内唯一の高度救命救急センターであり本県医療の中核を担う前橋赤十字病院が移転開院する。群馬大が展開している重粒子線がん治療では今年4月から公的医療保険の適用範囲が拡大した。県は今後も関係機関と連携しながら時代に即した医療体制を整え、県民の安心な暮らしを支えていく。"
+    },
+    {
+        "id": 2,
+        "sec": "かお",
+        "title":"「関東東海花の展覧会」洋らん部門で最高賞",
+        "caption": "",
+        "text" : "関根 洋一さん"
+    },
+    {
+        "id":3,
+        "sec": "県政の話題",
+        "title":"花と緑のぐんまづくりPR",
+        "caption": "県産食材を味わおうと試食も盛況だった",
+        "text": "地域をたくさんの花々で彩る「花と緑のぐんまづくり2018in吉岡」（花と緑のぐんまづくり推進協議会主催）が5月13日まで町役場周辺をメイン会場に開かれている。アイスランドポピーやマーガレット、ペチュニアなど約４万株が華やかな雰囲気を演出している。"
+    },
+    {
+        "id":4,
+        "sec": "県政の話題",
+        "title":"バスと列車でおでかけ わたらせ渓谷 ",
+        "caption": "道幅が広がった県道伊勢崎深谷線の上武大橋",
+        "text": "わたらせ渓谷鐵道（みどり市）は、２０１９年３月29日に開業30周年を迎えるのを前に、その記念事業の一環として、日光とわ鐵を結ぶバスと列車の運賃をセットにしたツアーを初めて企画した。ツアーは日光側と本県側両方から参加できる行程で、わ鐵の利用や県外からの観光誘客の促進が狙い。本年度はツアーのほか、さまざまなイベントを予定しており、30周年に向けてPR(ピーアール)に力を入れる。"
+    },
+    {
+        "id":5,
+        "sec": "県政の話題",
+        "title":"上海で日中書道展",
+        "caption": "",
+        "text": ""
+    }
+]}
+
+
+for (var i in data.release) {
+  //console.log(data.release[i].title);
+  var element_sec = document.getElementById("sec_data_" + data.release[i].id);
+  element_sec.innerHTML = data.release[i].sec;
+  console.log(element_sec)
+
+  var element_title = document.getElementById("title_data_" + data.release[i].id); 
+  element_title.innerHTML = data.release[i].title; 
+  console.log(element_title)
+
+  var element_caption = document.getElementById("caption_data_" + data.release[i].id); 
+  element_caption.innerHTML = data.release[i].caption;
+  console.log(element_caption)
+}
+
+
+
+
+
+})
+</script>
+</body>
+</html>

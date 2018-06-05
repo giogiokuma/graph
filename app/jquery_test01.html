@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <table cellpadding="0" cellspacing="0" border="0" class="tbl">
+    <col width="15%" />
+    <col width="15%" />
+    <col width="70%" />
+    <tbody>
+    <tr>
+    <th></th>
+    <td></td>
+    </tr>
+    </tbody>
+    </table>
+    <p>
+      <section class="main">
+
+      </section>
+  </p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(function(){
+
+//JSONデータ
+var data = {"release": [
+    {
+        "id": 1,
+        "sec": "特集",
+        "title":"医療先進県ぐんま",
+        "caption": "6月に移転開院する前橋赤十字病院",
+        "text": "県は「医療先進県ぐんまの推進」を目標に掲げ、県民ニーズに対応した高度・専門医療と救急・災害医療の提供・充実を図っている。県立4病院の安定経営のもとで良質な医療提供を目指すほか、今年6月には県内唯一の高度救命救急センターであり本県医療の中核を担う前橋赤十字病院が移転開院する。群馬大が展開している重粒子線がん治療では今年4月から公的医療保険の適用範囲が拡大した。県は今後も関係機関と連携しながら時代に即した医療体制を整え、県民の安心な暮らしを支えていく。"
+    },
+    {
+        "id": 2,
+        "sec": "かお",
+        "title":"「関東東海花の展覧会」洋らん部門で最高賞",
+        "caption": "",
+        "text" : "関根 洋一さん"
+    },
+    {
+        "id":3,
+        "sec": "県政の話題",
+        "title":"花と緑のぐんまづくりPR",
+        "caption": "県産食材を味わおうと試食も盛況だった",
+        "text": "地域をたくさんの花々で彩る「花と緑のぐんまづくり2018in吉岡」（花と緑のぐんまづくり推進協議会主催）が5月13日まで町役場周辺をメイン会場に開かれている。アイスランドポピーやマーガレット、ペチュニアなど約４万株が華やかな雰囲気を演出している。"
+    }
+]}
+
+$("section.main").html(""); 
+
+for(var item in data.release) {
+  console.log(data.release[item].title)
+  $('<div>' + data.release[item].title + '</div>').appendTo('section.main'); 
+
+}
+
+//HTMLを初期化
+/*$("table.tbl tbody").html("");
+
+
+for(var index in data.release){
+$('<tr>'+
+'<th>'+data.release[index].day+'</th>'+
+'<td class="label"><span class="' +
+data.release[index].label + '">' +
+data.release[index].category +
+'</span></td>'+
+'<td><a href="' + data.release[index].url +
+'" target="' + data.release[index].target +
+'">' + data.release[index].content + '</a></td>'+
+'</tr>').appendTo('table.tbl tbody');
+}*/
+
+
+});
+</script>
+</body>
+</html>
