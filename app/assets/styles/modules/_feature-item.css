@@ -6,8 +6,8 @@
 }
 
 @mixin atSmall {
-  display:block;
-  margin:0 auto;
+  display:block; 
+  margin: 0 auto; 
 }
 
 @mixin atLarge {
@@ -21,6 +21,8 @@
   position: relative;
   border: 6px solid rgba(255, 255, 255, .8);
   text-align:center;
+  display:block;
+
 
   @mixin atMedium {
     margin: 0 auto 0 auto;

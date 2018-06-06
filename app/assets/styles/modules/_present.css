@@ -6,8 +6,11 @@
   background: #f8f8f8 url('../../assets/images/bk01.png') top repeat;
 
   @mixin atSmall {
-    display:block;
-    margin:98px auto;
+    display: block; 
+    margin: 0 auto; 
+  }
+  @mixin atMedium {
+    margin-top:0;
   }
   @mixin atLarge {
     margin-bottom: 0;

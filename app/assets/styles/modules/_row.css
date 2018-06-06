@@ -38,6 +38,10 @@
     margin-bottom: 1rem;
   }
 
+  @mixin atSmall {
+    display:block; 
+    margin: 0 auto; 
+  }
   @mixin atMedium {
 
     &__b-margin-until-medium {

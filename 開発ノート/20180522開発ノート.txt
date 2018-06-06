@@ -1,3 +1,89 @@
+20180604
+
+jQuery で コードを出力した方が簡単　＞　セキュリティーが心配
+
+
+
+
+* jQuery を使わずにセキュリティ高い　XMLHttpRequest() を *
+
+https://www.websec-room.com/2015/06/28/2257
+----------
+20180604
+index10.html  > タイトルを自動的に入力
+問題  innerHTML エラーになる
+        var element_title = document.getElementById("title_data_" + data[item].id);
+        element_title.innerHTML = data[item].title;
+        console.log(element_title);
+
+
+<script>
+
+function getData() {
+  var xmlhttp = new XMLHttpRequest();
+  var url = "network_transfer2.json";
+
+  xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          var myArr = JSON.parse(xmlhttp.responseText);
+          insertData(myArr);
+
+      }
+  }
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+}
+
+function insertData(data) {
+    var output = "";
+    for (var item in data) {
+        //var element = document.getElementById("article_" + data[item].id);
+        
+        // セクションエレメント取得
+        var element_sec = document.getElementById("sec_data_" + data[item].id);
+        element_sec.innerHTML = data[item].sec;
+        console.log(element_sec); 
+        //element_sec.innerHTML = data[item].sec;
+        // タイトル取得
+        //var element_title = data[item].title;
+
+        // キャプション取得
+        //var element_caption = data[item].caption; 
+
+        // 本文
+        //var element_text = data[item].text; 
+
+
+//        element.innerHTML = data[item].id + "\n" + data[item].sec + "\n" + data[item].title + "\n" + data[item].caption + "\n" + data[item].text;
+        
+    }
+}
+
+</script>
+上のコードで　コンソールログすると
+<h3 id="sec_data_1" class="feature-item__section-title">特集</h3>
+....
+<h3 id="sec_data_12" class="contents-item-2col__title">ぐんま湯けむり浪漫</h3>
+<h3 id="sec_data_13" class="contents-item-2col__title">おさんぽ日和／安中のちょっといいもの</h3>
+-------
+
+
+
+
+
+---------
+20180601
+
+更新手順
+1. エクセルファイルを作成
+transfer.xlxs
+  => transfer.json に変換
+  
+
+2.　slider を　自動的に動かす
+ 
+---------
+
 20180531
 
 データー

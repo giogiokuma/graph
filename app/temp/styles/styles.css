@@ -654,6 +654,14 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+@media (min-width: 530px) {
+
+  .row {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 800px) {
 
   .row__b-margin-until-medium {
@@ -971,7 +979,14 @@ a:hover {
 
   .present {
     display: block;
-    margin: 98px auto;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .present {
+    margin-top: 0;
   }
 }
 
@@ -1052,6 +1067,7 @@ a:hover {
   position: relative;
   border: 6px solid rgba(255, 255, 255, .8);
   text-align:center;
+  display:block;
 }
 
 @media (min-width: 800px) {
