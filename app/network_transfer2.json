@@ -44,14 +44,14 @@
     {
         "id":7,
         "sec": "トピックス＆スポーツ",
-        "title":null,
+        "title":"",
         "caption": "",
         "text": ""
     },
     {
         "id":8,
         "sec": "かわら版",
-        "title":null,
+        "title":"",
         "caption": "",
         "text": ""
     },
@@ -84,7 +84,7 @@
         "text": ""
     },
     {
-        "id":13gi,
+        "id":13,
         "sec": "おさんぽ日和／安中のちょっといいもの",
         "title":"安中城址周辺エリア",
         "caption": "",
