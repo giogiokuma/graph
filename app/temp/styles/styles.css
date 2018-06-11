@@ -1246,16 +1246,17 @@ padding-bottom: 2.5rem;
   }
 }
 
-.contents-item-2col__icon {
+.contents-item-2col__photo {
   display: block;
   margin:0 auto;
 }
 
 @media (min-width: 530px) {
 
-  .contents-item-2col__icon {
+  .contents-item-2col__photo {
     position: absolute;
     left: 0;
+    width: 160px;
   }
 }
 

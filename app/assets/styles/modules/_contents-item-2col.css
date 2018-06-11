@@ -21,14 +21,16 @@ p {
   }
 }
 
-&__icon {
+&__photo {
   display: block; 
   margin:0 auto; 
 
   @mixin atSmall {
     position: absolute; 
     left: 0; 
+    width:160px;
   }
+
 }
 &__title {
   font-size: 1.6rem;
