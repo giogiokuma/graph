@@ -9,24 +9,47 @@
 <body>
 <div id="demo"></div>
 <div id="demo2"></div>
-
 <div id="demo3"></div>
+
+<div class="feature-item">
+  <h3 id="sec_data_2" class="feature-item__section-title"></h3>
+  <h3 id="title_data_2" class="feature-item__title"></h3>
+  <h3 id="sec_data_1" class="feature-item__section-title"></h3>
+
+</div>
+<div class="contents-item">
+
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
   $(function() {
     $.getJSON("./network_transfer2.json", function(data) {
-      var ulObj = $('#demo');
-      var ul2Obj = $('#demo2');
-      var ul3obj = $('#demo3'); 
-      ul3obj.append('----'+data[1].title+'----');
-      var len = data.length; 
+      /*var divObj = $('#demo');
+      var div2Obj = $('#demo2');
+      var div3obj = $('#demo3'); 
+      div3obj.append('----'+data[1].title+'----');
+
+
 
       for(var i = 0; i < len; i++) {
-        ulObj.append($("<li>").attr({"id": data[i].id}).text(data[i].title));
-        ul2Obj.append($("<div>").attr({"id": data[i].id}).text(data[i].sec));
+        divObj.append($("<li>").attr({"id": data[i].id}).text(data[i].title));
+          div2Obj.append($("<div>").attr({"id": data[i].id}).text(data[i].sec));
       }
-        
+      */
+      var div4obj = $('.feature-item'); 
+      div4obj.append('<h3 id="sec_data_2" class="feature-item__section-title">'+data[1].sec+'</h3>');
+      div4obj.append('<h3 id="title_data_2" class="feature-item__title">'+data[1].title+'</h3>'); 
+      div4obj.append('<h3 id="sec_data_1" class="feature-item__section-title">'+data[0].sec+'</h3>');
+      div4obj.append('<h3 id="title_data_1"><a href="assets/images/'+data[0].img+'" data-lightbox="1" title="<h3 class=\'caption\'>'+data[0].caption+'</h3><br /><p>'+data[0].text+'</p>">'+data[0].title+'&nbsp;<i class="fas fa-image"></i></a></h3>');
+      
+      var len = data.length; 
+      var div5obj = $('.contents-item');
+      div5obj.append('<h3 id="sec_data_3" class="contents-item__section-title">'+data[2].sec+'</h3>'); 
+      div5obj.append('<h3 id="title_data_3" class="contents-item__title"> <a href="assets/images/'+data[2].img+'" data-lightbox="1" title="<h3 class=\'caption\'>'+data[2].caption+'</h3><br /> <p>'+data[2].text+'</p>">'+data[2].title+'&nbsp;<i class="fas fa-image"></i></h3>'); 
+
+
+
     })
   })
 </script>

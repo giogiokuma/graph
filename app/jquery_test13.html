@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div id="demo"></div>
+<div id="demo2"></div>
+
+<div id="demo3"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $(function() {
+    $.getJSON("./network_transfer2.json", function(data) {
+      var divObj = $('#demo');
+      var div2Obj = $('#demo2');
+      var div3obj = $('#demo3'); 
+      div3obj.append('----'+data[1].title+'----');
+      var len = data.length; 
+
+      for(var i = 0; i < len; i++) {
+        divObj.append($("<li>").attr({"id": data[i].id}).text(data[i].title));
+          div2Obj.append($("<div>").attr({"id": data[i].id}).text(data[i].sec));
+      }
+        
+    })
+  })
+</script>
+  
+</body>
+</html>
