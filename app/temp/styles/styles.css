@@ -1122,6 +1122,7 @@ a:hover {
 .contents-item__photo {
   margin: 0 auto 0 auto;
   position: relative;
+  width:320px;
   border: 6px solid rgba(255, 255, 255, .8);
   text-align:center;
 }
@@ -1218,7 +1219,7 @@ padding-bottom: 2.5rem;
 @media (min-width: 530px) {
 
   .contents-item-2col {
-    padding-left: 94px;
+    padding-left: 180px;
   }
 }
 
@@ -1249,6 +1250,7 @@ padding-bottom: 2.5rem;
 .contents-item-2col__photo {
   display: block;
   margin:0 auto;
+  width:130px;
 }
 
 @media (min-width: 530px) {
@@ -1261,18 +1263,17 @@ padding-bottom: 2.5rem;
 }
 
 .contents-item-2col__title {
-  font-size: 1.6rem;
-  font-weight: 300;
-  margin-top: .7em;
-  margin-bottom: .8rem;
   text-align: center;
+  font-size: .9rem;
+  font-weight:700;
+  color: #5395cd;
 }
 
 @media (min-width: 530px) {
 
   .contents-item-2col__title {
     text-align: left;
-    margin-top: 0;
-    font-size: 1.875rem;
+    margin-top: 3px;
+    font-size: .9rem;
   }
 } 

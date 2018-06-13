@@ -17,8 +17,10 @@
   }
 
   &__photo {
+
     margin: 0 auto 0 auto;
     position: relative;
+    width:320px;
     border: 6px solid rgba(255, 255, 255, .8);
     text-align:center; 
 
