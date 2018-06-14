@@ -1,3 +1,7 @@
+20180614
+<i class="fas fa-asterisk"></i>&nbsp;<i class="fas fa-asterisk"></i>&nbsp;<i class="fas fa-asterisk"></i>
+----------
+
 20180604
 
 jQuery で コードを出力した方が簡単　＞　セキュリティーが心配
