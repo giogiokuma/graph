@@ -1,4 +1,56 @@
 20180614
+
+wordPress インストール
+
+id: giogiokuma
+pwd: )bSuLp0Tw!g31#A@lg
+
+http://web.mt-systems.jp/archives/744
+
+**サブディレクトリにwordpress をインストール**
+1. /wp/ に通常インストールする > /wp-admin/install.php実行　
+
+2. 
+
+define('WP_ALLOW_MULTISITE', true );  //この定義文を 「require_once(ABS_PATH . ‘wp-setting.php’)」命令以前に記入・保存する。
+
+3. 管理者権限でログイン [ツール]-[ネットワーク]を設定、保存する。
+.htaccess の mod_rewrite に関する設定と、wp-config.php に設定するマルチサイトに関する情報が表示されるので、各ファイルを更新する。
+
+a. wp-config.php と .htaccess をバックアップ
+b. 　wp-config.php　　（管理画面）
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', false);
+define('DOMAIN_CURRENT_SITE', 'ohatadesign.sakura.ne.jp');
+define('PATH_CURRENT_SITE', '/graph/wp/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
+
+c.  .htaccess  （管理画面）
+RewriteEngine On
+RewriteBase /graph/wp/
+RewriteRule ^index\.php$ - [L]
+
+# add a trailing slash to /wp-admin
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
+RewriteRule . index.php [L]
+
+4. サブディレクトリでマルチサイト化（wp-content/blogs.dir）を作り、
+メニューのネットワークセットアップを選択
+
+
+
+
+
+----------
+
+20180614
 <i class="fas fa-asterisk"></i>&nbsp;<i class="fas fa-asterisk"></i>&nbsp;<i class="fas fa-asterisk"></i>
 ----------
 
