@@ -15,7 +15,8 @@
   }
 
   &--gutters-smallest {
-    margin-right: -25px;
+   /*margin-right: -25px;*/
+    padding:0 22px;
   }
 
   &--gutters > div {
@@ -31,7 +32,7 @@
   }
 
   &--gutters-smallest > div {
-    padding-right: 25px; 
+    padding-right: 25px;   
   }
 
   &__b-margin-until-medium {

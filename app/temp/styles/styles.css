@@ -630,8 +630,8 @@ a:hover {
   margin-right: -45px;
 }
 
-.row--gutters-smallest {
-  margin-right: -25px;
+.row--gutters-smallest {/*margin-right: -25px;*/
+  padding:0 22px;
 }
 
 .row--gutters > div {
@@ -850,16 +850,8 @@ a:hover {
   margin: 0;
 }
 
-@media (min-width: 800px) {
-
-  .topic h3 {
-    font-weight: 700;
-    font-size: 1.125rem;
-  }
-
-  .topic p {
-    margin-bottom: 1.5rem;
-  }
+.other {
+  background: #f8f8f8 url('../../assets/images/bk01.png') top repeat;
 }
 
 .slideshow-container img:hover {
@@ -968,8 +960,7 @@ a:hover {
 }
 
 .present {
-
-  padding: .5rem 18px 1px 18px;
+  /*padding: .5rem 18px 1px 18px;*/
   margin-bottom: 98px;
   margin-top:98px;
   background: #f8f8f8 url('../../assets/images/bk01.png') top repeat;
@@ -1006,8 +997,8 @@ a:hover {
 
 .present__photo {/*border-radius: 80px;
     overflow: hidden;*/
-  width: 320px;
-  height: 320px;
+  width: 310px;
+  height: 310px;
   margin: .75rem auto .25rem auto;
   position: relative;
 }
@@ -1095,27 +1086,15 @@ a:hover {
 }
 
 .contents-item {
-  
-  padding: 0 18px 1px 18px;
-}
-
-.contents-item--last {
-  margin-bottom:4rem;
+  position: relative;
+  padding-bottom: 2.5rem;
 }
 
 @media (min-width: 530px) {
 
-  .contents-item {
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1010px) {
-
-  .contents-item {
-    margin-bottom: 0;
-    padding: 0 1.8125rem 1px 1.8125rem;
+  .contents-item {/*padding-left: 94px;*/
+    padding-left: 39px;
+    padding-right: 39px;
   }
 }
 
@@ -1134,36 +1113,28 @@ a:hover {
     position: relative;
     border: 6px solid rgba(255, 255, 255, .8);
     text-align: center;
-  }
-}
-
-.contents-item__title {
-  color: #2C3239;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-@media (min-width: 1010px) {
-
-  .contents-item__title {
-    margin: 0 .25rem 0 .25rem;
+    width: 240px;
   }
 }
 
 .contents-item__section-title {
-  text-align: center;
   font-size: .9rem;
   font-weight:700;
   color: #5395cd;
 }
 
 .contents-item__title {
-  color: #2C3239;
+  font-size: 1.125rem;
+  font-weight: 300;
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin: 0;
+}
+
+@media (min-width: 530px) {
+
+  .contents-item__title {
+    text-align: left;
+    font-size: 1.125rem;
+  }
 }
 
 .section-title {

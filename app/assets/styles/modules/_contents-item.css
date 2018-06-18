@@ -1,20 +1,12 @@
 .contents-item {
-  
-  padding: 0 18px 1px 18px;
-
-  
-  &--last {
-    margin-bottom:4rem;
-  }
-
+  position: relative;
+  padding-bottom: 2.5rem;
   @mixin atSmall {
-    display: block; 
-    margin: 0 auto; 
+    /*padding-left: 94px;*/
+    padding-left:39px;
+    padding-right:39px;
   }
-  @mixin atLarge {
-    margin-bottom: 0;
-    padding: 0 1.8125rem 1px 1.8125rem;
-  }
+
 
   &__photo {
 
@@ -29,33 +21,24 @@
       position: relative;
       border: 6px solid rgba(255, 255, 255, .8);
       text-align:center;
+      width:240px;
     }
   }
+  &__section-title {
 
+    font-size: .9rem;
+    font-weight:700;
+    color: $titleBlue;
+  }
+  
   &__title {
-
-    color: $mainBlue;
+    font-size: 1.125rem;
+    font-weight: 300;
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 500;
 
-    @mixin atLarge {
-      margin: 0 .25rem 0 .25rem;
+    @mixin atSmall {
+      text-align: left;
+      font-size: 1.125rem;
     }
   }
-
- &__section-title {
-  text-align: center;
-  font-size: .9rem;
-  font-weight:700;
-  color: $titleBlue;
-  }
-
-&__title {
-  color: $mainBlue;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin: 0;
-}
 }
