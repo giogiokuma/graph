@@ -1,13 +1,18 @@
 .contents-item {
   position: relative;
   padding-bottom: 2.5rem;
+  text-align:center;
   @mixin atSmall {
     /*padding-left: 94px;*/
     padding-left:39px;
     padding-right:39px;
   }
 
-
+  @mixin atLarge {
+    padding-left:19px;
+    padding-right:19px;
+  }
+/*
   &__photo {
 
     margin: 0 auto 0 auto;
@@ -40,5 +45,5 @@
       text-align: left;
       font-size: 1.125rem;
     }
-  }
+  }*/
 }
