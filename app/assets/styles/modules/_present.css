@@ -3,32 +3,36 @@
   margin-bottom: 98px;
   margin-top:98px;
   background: #f8f8f8 url('../../assets/images/bk01.png') top repeat;
+  text-align:center;
+  padding:0 1.8125rem 1px 1.8125rem; 
+  &--wrapper {
+　　border:1px solid #999;
+  }
   @mixin atSmall {
-    display: block; 
+    display:block; 
     margin: 0 auto; 
   }
-  @mixin atMedium {
-    margin-top:0;
-  }
+  
   @mixin atLarge {
-    margin-bottom: 0;
-    margin-top:0;
-    padding: 0 1.8125rem 1px 1.8125rem;
+    margin-bottom: 0; 
+    padding:0 1.8125rem 1px 1.8125rem; 
   }
-
-  &--last {
-    margin-bottom: 0;
-    text-align: center;
-  }
-
+  
   &__photo {
-    /*border-radius: 80px;
-    overflow: hidden;*/
-    width: 310px;
-    height: 310px;
-    margin: .75rem auto .25rem auto;
-    position: relative;
 
+    margin: 0 auto 0 auto;
+    position: relative;
+    /*border: 6px solid rgba(255, 255, 255, .8);*/
+    text-align:center;
+    display:block;
+  
+  
+    @mixin atMedium {
+      margin: 0 auto 0 auto;
+      position: relative;
+      /*border: 6px solid rgba(255, 255, 255, .8);*/
+      text-align:center;
+    }
   }
 
   &__title {
@@ -53,5 +57,8 @@
   }
    p a {
     font-weight: 300;
+  }
+  &__body {
+    text-align:center;
   }
 }
