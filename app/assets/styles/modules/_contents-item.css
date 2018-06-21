@@ -1,49 +1,48 @@
+
 .contents-item {
+  padding: 0 18px 1px 18px;
+&--last {
+  margin-bottom:4rem;
+}
+
+@mixin atSmall {
+  display:block; 
+  margin: 0 auto; 
+}
+
+@mixin atLarge {
+  margin-bottom: 0; 
+  padding:0 1.8125rem 1px 1.8125rem; 
+
+}
+
+&__photo {
+  margin: 0 auto 0 auto;
   position: relative;
-  padding-bottom: 2.5rem;
+  /* border: 6px solid rgba(255, 255, 255, .8); */
   text-align:center;
-  @mixin atSmall {
-    /*padding-left: 94px;*/
-    padding-left:39px;
-    padding-right:39px;
-  }
+  display:block;
 
-  @mixin atLarge {
-    padding-left:19px;
-    padding-right:19px;
-  }
-/*
-  &__photo {
-
+  @mixin atMedium {
     margin: 0 auto 0 auto;
     position: relative;
-    width:320px;
     border: 6px solid rgba(255, 255, 255, .8);
-    text-align:center; 
-
-    @mixin atMedium {
-      margin: 0 auto 0 auto;
-      position: relative;
-      border: 6px solid rgba(255, 255, 255, .8);
-      text-align:center;
-      width:240px;
-    }
+    text-align:center;
   }
-  &__section-title {
-
-    font-size: .9rem;
-    font-weight:700;
-    color: $titleBlue;
+}
+&__section-title {
+  text-align: center;
+  font-size: .9rem;
+  font-weight:700;
+  color: $titleBlue;
   }
-  
-  &__title {
-    font-size: 1.125rem;
-    font-weight: 300;
-    text-align: center;
 
-    @mixin atSmall {
-      text-align: left;
-      font-size: 1.125rem;
-    }
-  }*/
+&__title {
+  color: $mainBlue;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0;
+}
+
 }
