@@ -36,16 +36,54 @@
   }
 
   &__title {
-    color: $mainBlue;
-    text-align: center;
-    font-size: 1.4375em;
-    font-weight: 500;
-    margin: .25rem 0 0 0;
-    background: url('../../assets/images/present.png') top no-repeat;
-    width: 100%; height:auto; 
-    background-size:100%;
-    color:white;
-    padding:8px .25rem;
+      font-size:1.25em; 
+      background: url('../../assets/images/present.png') top no-repeat;
+      font-weight: 500;
+      text-align: center;
+      margin: .25rem 0 .5rem 0;
+      width: 100%; height:auto; 
+      background-size:100%;
+      color:white;
+      padding:8px .25rem;
+      border:none;
+    @mixin atSmall {
+      color: $mainBlue;
+      text-align: center;
+      font-size: 1.25em;
+      font-weight: 500;
+      margin: .5rem 0 .5rem 0;
+      background: url('../../assets/images/present.png') top no-repeat;
+      width: 100%; 
+      height:auto; 
+      background-size:100%;
+      color:white;
+      padding:8px .25rem;
+    }
+    @mixin atMedium {
+      color: $mainBlue;
+      text-align: center;
+      font-size: 1em;
+      font-weight: 500;
+      margin: .5rem 0 .5rem 0;
+      background: url('../../assets/images/present.png') top no-repeat;
+      width: 100%; height:auto; 
+      background-size:100%;
+      color:white;
+      padding:3px .25rem;
+    }
+    @mixin atLarge {
+      color: $mainBlue;
+      text-align: center;
+      font-size: 1.475em;
+      font-weight: 500;
+      margin: .5rem 0 .5rem 0;
+      background: url('../../assets/images/present.png') top no-repeat;
+      width: 100%; height:auto; 
+      background-size:100%;
+      color:white;
+      padding:3px .25rem;
+    }
+    
   }
 
   &__subtitle {
@@ -54,11 +92,27 @@
     font-weight: 700;
     font-size: 0.9375rem;
     margin: .25rem 0 1rem 0;
+    @mixin atSmall {
+      font-size: 0.9375rem;
+    }
+    @mixin atMedium {
+      font-size: 0.8rem;
+    }
+    @mixin atLarge {
+      font-size: 0.9375rem;
+    }
   }
    p a {
     font-weight: 300;
   }
-  &__body {
+    &__body a {
     text-align:center;
+    @mixin atSmall {
+      font-size: 1rem;
+    }
+    @mixin atMedium {
+      border:none;
+      font-size: 1.125rem;
+    }
   }
 }

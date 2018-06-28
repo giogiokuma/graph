@@ -1009,17 +1009,68 @@ a:hover {
 }
 
 .present__title {
-  color: #2C3239;
-  text-align: center;
-  font-size: 1.4375em;
-  font-weight: 500;
-  margin: .25rem 0 0 0;
+  font-size:1.25em;
   background: url('../../assets/images/present.png') top no-repeat;
+  font-weight: 500;
+  text-align: center;
+  margin: .25rem 0 .5rem 0;
   width: 100%;
   height:auto;
   background-size:100%;
   color:white;
   padding:8px .25rem;
+  border:none;
+}
+
+@media (min-width: 530px) {
+
+  .present__title {
+    color: #2C3239;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 500;
+    margin: .5rem 0 .5rem 0;
+    background: url('../../assets/images/present.png') top no-repeat;
+    width: 100%;
+    height: auto;
+    background-size: 100%;
+    color: white;
+    padding: 8px .25rem;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .present__title {
+    color: #2C3239;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    margin: .5rem 0 .5rem 0;
+    background: url('../../assets/images/present.png') top no-repeat;
+    width: 100%;
+    height: auto;
+    background-size: 100%;
+    color: white;
+    padding: 3px .25rem;
+  }
+}
+
+@media (min-width: 1010px) {
+
+  .present__title {
+    color: #2C3239;
+    text-align: center;
+    font-size: 1.475em;
+    font-weight: 500;
+    margin: .5rem 0 .5rem 0;
+    background: url('../../assets/images/present.png') top no-repeat;
+    width: 100%;
+    height: auto;
+    background-size: 100%;
+    color: white;
+    padding: 3px .25rem;
+  }
 }
 
 .present__subtitle {
@@ -1030,12 +1081,48 @@ a:hover {
   margin: .25rem 0 1rem 0;
 }
 
+@media (min-width: 530px) {
+
+  .present__subtitle {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .present__subtitle {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1010px) {
+
+  .present__subtitle {
+    font-size: 0.9375rem;
+  }
+}
+
 .present p a {
   font-weight: 300;
 }
 
-.present__body {
+.present__body a {
   text-align:center;
+}
+
+@media (min-width: 530px) {
+
+  .present__body a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .present__body a {
+    border: none;
+    font-size: 1.125rem;
+  }
 }
 
 .feature-item {
