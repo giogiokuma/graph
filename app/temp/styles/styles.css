@@ -1287,12 +1287,19 @@ a:hover {
 position: relative; 
 padding-bottom: 1.5rem;
   
+
 }
 
 @media (min-width: 530px) {
 
   .contents-item-2col {
     padding-left: 180px;
+    margin-bottom: 3.9rem;
+  }
+
+  .contents-item-2col__lastitem {
+    padding-left: -180px;
+    margin-left: -180px;
     margin-bottom: 3.9rem;
   }
 }

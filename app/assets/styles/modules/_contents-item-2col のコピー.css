@@ -1,19 +1,11 @@
 .contents-item-2col {
 position: relative; 
 padding-bottom: 1.5rem; 
-
-
 @mixin atSmall {
   padding-left: 180px;
   margin-bottom: 3.9rem; 
-  &__lastitem {
-    padding-left:-180px;
-    margin-left:-180px;
-    margin-bottom: 3.9rem; 
-    }
 }
 
-  
 span {
   display: block; 
   text-align:center;
@@ -38,6 +30,7 @@ p {
     position: absolute; 
     left: 0; 
     width:160px;
+    
   }
 }
 
@@ -54,5 +47,4 @@ p {
   }
 }
   
-
 }
