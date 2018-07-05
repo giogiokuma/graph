@@ -1290,6 +1290,12 @@ padding-bottom: 1.5rem;
 
 }
 
+.contents-item-2col__lastitem h3{
+  margin-top:.6875rem;
+  padding-bottom:.6rem;
+  border-bottom:1px solid #ccc;
+}
+
 @media (min-width: 530px) {
 
   .contents-item-2col {
@@ -1298,9 +1304,19 @@ padding-bottom: 1.5rem;
   }
 
   .contents-item-2col__lastitem {
-    padding-left: -180px;
+    padding-top: .1rem;
+  }
+
+  .contents-item-2col__lastitem h3 {
+    padding-left: 0px;
     margin-left: -180px;
-    margin-bottom: 3.9rem;
+    margin-top: .6875rem;
+    margin-bottom: .6875rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .contents-item-2col__lastitem h3::before {
+    content: ". ";
   }
 }
 
